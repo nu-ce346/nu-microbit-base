@@ -13,7 +13,7 @@ build system provided by [nrf52x-base](https://github.com/lab11/nrf52x-base).
     * build-essential (make)
     * git
     * python3
-    * pyserial
+    * pyserial (`sudo apt install python3-serial`)
 
  2. ARM cross-compiler toolchain: [gcc-arm-none-eabi toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
 
@@ -63,6 +63,6 @@ can connect with any serial terminal, but miniterm comes with pyserial and
 works pretty well for this.
 
 ```
-$ miniterm.py /dev/ttyACM0 38400
+$ miniterm /dev/ttyACM0 38400
 ```
 
