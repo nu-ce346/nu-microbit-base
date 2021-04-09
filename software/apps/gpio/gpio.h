@@ -4,8 +4,8 @@
 #include "stdbool.h"
 
 typedef enum {
-    GPIO_INPUT = 0,
-    GPIO_OUTPUT,
+  GPIO_INPUT = 0,
+  GPIO_OUTPUT,
 } gpio_direction_t;
 
 // Inputs: 
@@ -26,3 +26,4 @@ void gpio_clear(uint8_t gpio_num);
 // Returns:
 //  current state of the specified gpio pin (true == high)
 bool gpio_read(uint8_t gpio_num);
+
