@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <math.h>
 
 #include "app_timer.h"
 #include "nrf_delay.h"
@@ -18,6 +19,11 @@
 #define LED_RED   EDGE_P13
 #define LED_GREEN EDGE_P14
 #define LED_BLUE  EDGE_P15
+
+// Digital inputs
+// Breakout pin 16
+// These are GPIO pin numbers that can be used in nrf_gpio_* calls
+#define SWITCH_IN EDGE_P16
 
 // Analog inputs
 // Breakout pins 1 and 2
@@ -49,10 +55,13 @@ static void saadc_event_callback(nrfx_saadc_evt_t const* _unused) {
 }
 
 static void gpio_init(void) {
-  // Initialize pins
+  // Initialize output pins
   // TODO
 
   // Set LEDs off initially
+  // TODO
+
+  // Initialize input pin
   // TODO
 }
 
