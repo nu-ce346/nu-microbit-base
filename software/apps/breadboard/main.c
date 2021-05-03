@@ -28,6 +28,7 @@
 // Analog inputs
 // Breakout pins 1 and 2
 // These are GPIO pin numbers that can be used in ADC configurations
+// AIN1 is breakout pin 1. AIN2 is breakout pin 2.
 #define ANALOG_TEMP_IN  NRF_SAADC_INPUT_AIN1
 #define ANALOG_LIGHT_IN NRF_SAADC_INPUT_AIN2
 
