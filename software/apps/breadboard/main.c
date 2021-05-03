@@ -28,8 +28,8 @@
 // Analog inputs
 // Breakout pins 1 and 2
 // These are GPIO pin numbers that can be used in ADC configurations
-#define ANALOG_TEMP_IN  EDGE_P1
-#define ANALOG_LIGHT_IN EDGE_P2
+#define ANALOG_TEMP_IN  NRF_SAADC_INPUT_AIN1
+#define ANALOG_LIGHT_IN NRF_SAADC_INPUT_AIN2
 
 // ADC channel configurations
 // These are ADC channel numbers that can be used in ADC calls
