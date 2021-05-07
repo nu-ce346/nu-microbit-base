@@ -105,7 +105,7 @@ static void adc_init(void) {
   nrfx_saadc_init(&saadc_config, saadc_event_callback);
 
   // Initialize the microphone ADC channel
-  // It's a small signal we're sampling quickly, som ax out gain and minimize
+  // It's a small signal we're sampling quickly, so max out gain and minimize
   //    acquisition time
   nrf_saadc_channel_config_t mic_channel_config = NRFX_SAADC_DEFAULT_CHANNEL_CONFIG_SE(ANALOG_MIC_IN);
   mic_channel_config.gain = NRF_SAADC_GAIN4;
