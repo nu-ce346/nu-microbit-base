@@ -49,7 +49,7 @@
 // Microphone
 // Power is the same as the LED pin
 #define MIC_POWER NRF_GPIO_PIN_MAP(0,20)
-#define MIC_IN    NRF_GPIO_PIN_MAP(0  5)
+#define MIC_IN    NRF_GPIO_PIN_MAP(0, 5)
 
 // Edge connector pins (includes duplicates from above)
 #define EDGE_P0  NRF_GPIO_PIN_MAP(0, 2)

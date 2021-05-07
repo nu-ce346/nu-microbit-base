@@ -69,6 +69,8 @@ BOARD_SOURCES += \
 	nrfx_uarte.c\
 	app_fifo.c\
 	app_uart_fifo.c\
+	nrf_twi_mngr.c\
+	nrfx_pwm.c\
 
 endif
 
