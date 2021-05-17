@@ -47,7 +47,7 @@ void lsm303agr_init(const nrf_twi_mngr_t* i2c) {
 
   // Reboot acclerometer
   i2c_reg_write(LSM303AGR_ACC_ADDRESS, LSM303AGR_ACC_CTRL_REG5, 0x80);
-  nrf_delay_ms(5); // needs delay to wait for reboot
+  nrf_delay_ms(100); // needs delay to wait for reboot
 
   // Enable Block Data Update
   // Only updates sensor data when both halves of the data has been read
@@ -55,7 +55,7 @@ void lsm303agr_init(const nrf_twi_mngr_t* i2c) {
 
   // Configure accelerometer at 100Hz, normal mode (10-bit)
   // Enable x, y and z axes
-  i2c_reg_write(LSM303AGR_ACC_ADDRESS, LSM303AGR_ACC_CTRL_REG1, 0x77);
+  i2c_reg_write(LSM303AGR_ACC_ADDRESS, LSM303AGR_ACC_CTRL_REG1, 0x57);
 
   // Read WHO AM I register
   // Always returns the same value if working
@@ -66,7 +66,7 @@ void lsm303agr_init(const nrf_twi_mngr_t* i2c) {
 
   // Reboot magnetometer
   i2c_reg_write(LSM303AGR_MAG_ADDRESS, LSM303AGR_MAG_CFG_REG_A, 0x40);
-  nrf_delay_ms(5); // needs delay to wait for reboot
+  nrf_delay_ms(100); // needs delay to wait for reboot
 
   // Enable Block Data Update
   // Only updates sensor data when both halves of the data has been read
