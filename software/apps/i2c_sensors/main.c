@@ -24,16 +24,17 @@ int main(void) {
   i2c_config.scl = I2C_SCL;
   i2c_config.sda = I2C_SDA;
   i2c_config.frequency = NRF_TWIM_FREQ_100K;
+  i2c_config.interrupt_priority = 0;
   nrf_twi_mngr_init(&twi_mngr_instance, &i2c_config);
 
   // Initialize the LSM303AGR accelerometer/magnetometer sensor
   lsm303agr_init(&twi_mngr_instance);
 
+  //TODO: implement me!
+
   // Loop forever
   while (1) {
-    // Print output
-    //TODO: implement me!
-
+    // Don't put any code in here. Instead put periodic code in a callback using a timer.
     nrf_delay_ms(1000);
   }
 }
