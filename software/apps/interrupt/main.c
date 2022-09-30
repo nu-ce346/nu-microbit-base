@@ -39,17 +39,14 @@ void GPIOTE_IRQHandler(void) {
 int main(void) {
   printf("Board started!\n");
 
-  // Step 5:
   // Trigger a GPIOTE interrupt
   // You can access the GPIOTE register map as NRF_GPIOTE->
   //    where the register name in all caps goes after the arrow.
   //    For example, NRF_GPIOTE->CONFIG[0]
 
-  // STEP 6:
   // Trigger a software interrupt
   // Use the software_interupt_* functions defined above
 
-  // STEP 7:
   // Trigger a software interrupt and demonstrate that a GPIO interrupt
   //    can preempt it if at a lower priority number
 
