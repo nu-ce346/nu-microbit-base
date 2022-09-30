@@ -27,3 +27,6 @@ void gpio_clear(uint8_t gpio_num);
 //  current state of the specified gpio pin (true == high)
 bool gpio_read(uint8_t gpio_num);
 
+// prints out some information about the GPIO driver. Can be called from main()
+void gpio_print(void);
+

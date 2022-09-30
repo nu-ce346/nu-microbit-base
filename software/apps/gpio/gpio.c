@@ -35,3 +35,9 @@ bool gpio_read(uint8_t gpio_num) {
   return true;
 }
 
+// prints out some information about the GPIO driver. Can be called from main()
+void gpio_print(void) {
+  // use this function for debugging purposes
+  // you don't otherwise have to write anything here
+}
+
