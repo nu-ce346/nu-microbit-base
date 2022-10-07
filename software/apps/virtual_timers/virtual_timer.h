@@ -3,6 +3,8 @@
 #include "nrf.h"
 
 // Type for the function pointer to call when the timer expires
+// A virtual_timer_callback_t can be any function that takes no arguments and returns no value
+// For example: `void my_timer_callback(void) { }`
 typedef void (*virtual_timer_callback_t)(void);
 
 // Read the current value of the hardware timer counter

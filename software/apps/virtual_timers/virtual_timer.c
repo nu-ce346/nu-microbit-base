@@ -38,7 +38,8 @@ void virtual_timer_init(void) {
   // Place your timer initialization code here
 }
 
-// Start a timer. This function is called for both one-shot and repeated timers
+// This is a private helper function called from multiple public functions with different arguments.
+// Starts a timer. This function is called for both one-shot and repeated timers
 // To start a timer:
 // 1) Create a linked list node (This requires `malloc()`. Don't forget to free later)
 // 2) Setup the linked list node with the correct information
