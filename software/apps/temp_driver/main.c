@@ -21,12 +21,13 @@ int main(void) {
 
   // Get temperature without blocking
   get_temperature_nonblocking(temp_callback, NULL);
+  nrf_delay_ms(1000); // should have printed before delay is complete
 
   // loop forever
   while (1) {
-    nrf_delay_ms(1000);
     printf("Looping\n");
     printf("New temp: %f degrees C\n", get_temperature_blocking());
+    nrf_delay_ms(1000);
   }
 }
 
