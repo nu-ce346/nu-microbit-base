@@ -154,15 +154,20 @@ static void pwm_init(void) {
 
 static void play_audio_samples_looped(void) {
   // Recalculate each sample as a duty cycle based on countertop
-  // Each sample should be modified in place
+  // Samples currently range from 0 to ADC_MAX_COUNTS
+  // Samples should range from 0 to COUNTERTOP
+  // Each sample should be rescaled in place
   // TODO
 
   // Create the pwm sequence (nrf_pwm_sequence_t) using the samples
   // Do not make another buffer for this. You can reuse the sample buffer
-  // You should set a non-zero repeat value (note that will affect frequency)
+  // You should set a non-zero repeat value (this is how many times each _sample_ repeats)
   // TODO
 
   // Start playback of the samples and loop indefinitely
+  // You will need to pass in a flag to loop the sound
+  // The playback count here is the number of times the entire buffer will repeat
+  //    (which doesn't matter if you set the loop flag)
   // TODO
 }
 

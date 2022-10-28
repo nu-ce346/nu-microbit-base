@@ -1,6 +1,6 @@
-// PWM Tone App
+// PWM Square wave tone app
 //
-// Use PWM to play a tone over the speaker
+// Use PWM to play a tone over the speaker using a square wave
 
 #include <stdbool.h>
 #include <stdint.h>
