@@ -84,7 +84,8 @@ static void play_note(uint16_t frequency) {
   // The first should be sine_buffer[0],
   //    then each successive sample will be "step_size" further along the sine wave
   // Be sure to convert the cumulative step_size into an integer to access an item in sine_buffer
-  // If the cumulative steps are greater than SINE_BUFFER_SIZE, wrap back to zero
+  // If the cumulative steps are greater than SINE_BUFFER_SIZE, wrap back around zero
+  //    but don't just set it to zero, as that would be discontinuous
   // TODO
 
   // Create the pwm sequence (nrf_pwm_sequence_t) using the samples
