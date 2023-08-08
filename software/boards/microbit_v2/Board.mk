@@ -73,5 +73,9 @@ BOARD_SOURCES += \
 	nrfx_uart.c\
 	nrfx_uarte.c\
 
+# Include the OpenOCD programming makefile
+# Replace the default JLink programming makefile from the nrf52x-base repo
+include $(BOARD_DIR)/Program_OpenOCD.mk
+
 endif
 
