@@ -57,5 +57,9 @@ BOARD_SOURCES += \
 	app_fifo.c\
 	app_uart_fifo.c\
 
+# Include the OpenOCD programming makefile
+# Replace the default JLink programming makefile from the nrf52x-base repo
+include $(BOARD_DIR)/../../tools/openocd/Program_OpenOCD.mk
+
 endif
 

@@ -12,9 +12,13 @@ JTAG_MAKEFILE = 1
 all:
 
 
+# Get directory of this makefile
+OPENOCD_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+
+
 # ---- OpenOCD configuration
 OPENOCD = openocd
-OPENOCD_OPTIONS = -f $(BOARD_DIR)/openocd.cfg
+OPENOCD_OPTIONS = -f $(OPENOCD_DIR)/openocd.cfg
 
 
 .PHONY: flash
