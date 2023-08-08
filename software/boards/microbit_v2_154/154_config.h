@@ -1,0 +1,4 @@
+#pragma once
+
+#define NRF_802154_CLOCK_LFCLK_SOURCE NRF_CLOCK_LFCLK_RC
+
