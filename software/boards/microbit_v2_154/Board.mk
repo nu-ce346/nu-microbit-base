@@ -136,6 +136,9 @@ BOARD_SOURCES += \
 	nrf_802154_random_stdlib.c\
 	nrf_802154_temperature_none.c\
 
+# Include the OpenOCD programming makefile
+# Replace the default JLink programming makefile from the nrf52x-base repo
+include $(BOARD_DIR)/../../tools/openocd/Program_OpenOCD.mk
 
 endif
 
