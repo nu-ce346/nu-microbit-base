@@ -35,7 +35,6 @@ BOARD_SOURCES += \
 	app_error_handler_gcc.c\
 	app_util_platform.c\
 	hardfault_handler_gcc.c\
-	hardfault_implementation.c\
 	nrf_assert.c\
 	nrf_atomic.c\
 	nrf_balloc.c\

@@ -36,7 +36,6 @@ BOARD_SOURCES += \
 	app_uart_fifo.c\
 	app_util_platform.c\
 	hardfault_handler_gcc.c\
-	hardfault_implementation.c\
 	nrf_assert.c\
 	nrf_atomic.c\
 	nrf_balloc.c\
