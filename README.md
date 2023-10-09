@@ -19,27 +19,23 @@ build system provided by [nrf52x-base](https://github.com/lab11/nrf52x-base).
 
     On Ubuntu:
 
-        cd /tmp \
-        && wget -c https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2 \
-        && tar xjf gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2 \
-        && sudo mv gcc-arm-none-eabi-9-2020-q2-update /opt/gcc-arm-none-eabi-9-2020-q2-update \
-        && rm gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2 \
-        && sudo ln -s /opt/gcc-arm-none-eabi-9-2020-q2-update/bin/* /usr/local/bin/.
+        sudo apt install gcc-arm-none-eabi
 
     On MacOS:
 
         brew tap ArmMbed/homebrew-formulae
-        brew install arm-none-eabi-gcc
+        brew update
+        brew install ARMmbed/homebrew-formulate/arm-none-eabi-gcc
 
- 3. JTAG programming tools: [Segger JLink](https://www.segger.com/jlink-software.html)
+ 3. JTAG programming tools: OpenOCD
 
-    Pick the correct package for your OS under "Software and documentation pack".
+    On Ubuntu:
 
- 4. Update the JTAG firmware on your Micro:bit v2
+        sudo apt install openocd
 
-    Follow the instructions here: https://www.segger.com/products/debug-probes/j-link/models/other-j-links/bbc-microbit-j-link-upgrade/
+    On MacOS:
 
-    (You can later restore the original firmware with the instructions here: https://microbit.org/get-started/user-guide/firmware/)
+        brew install open-ocd
 
 
 ## Installation
@@ -63,6 +59,6 @@ can connect with any serial terminal, but miniterm comes with pyserial and
 works pretty well for this.
 
 ```
-$ miniterm /dev/ttyACM0 38400
+$ pyserial-miniterm /dev/ttyACM0 38400
 ```
 
