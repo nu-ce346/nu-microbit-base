@@ -19,9 +19,9 @@ void led_matrix_init(void) {
 
   // set default values for pins
 
-  // initialize timer(s) (Part 3 and onwards)
+  // initialize timer(s) (Step 2 and onwards)
 
-  // set default state for the LED display (Part 4 and onwards)
+  // set default state for the LED display (Step 3 and onwards)
 }
 
 
