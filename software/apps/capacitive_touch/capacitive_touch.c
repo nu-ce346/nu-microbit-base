@@ -23,6 +23,9 @@ static bool touch_active = false;
 
 // Callback function for GPIO interrupts
 static void gpio_handler(nrfx_gpiote_pin_t pin, nrf_gpiote_polarity_t action) {
+  // Disable the GPIO interrupt event so you don't get multiple spurious events
+  nrfx_gpiote_in_event_disable(TOUCH_LOGO);
+
   // Implement me first!
 }
 
