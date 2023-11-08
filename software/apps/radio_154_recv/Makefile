@@ -14,6 +14,7 @@ APP_SOURCES = $(notdir $(wildcard ./*.c))
 NRF_BASE_DIR = ../../nrf52x-base/
 
 # Include board Makefile (if any)
+# This is the 15.4-specific Microbit board file
 include ../../boards/microbit_v2_154/Board.mk
 
 # Include main Makefile

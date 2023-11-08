@@ -9,11 +9,12 @@ BOARD_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 KEY_DIR := $(BOARD_DIR)/../keys/
 
 # Include any files in this directory in the build process
-BOARD_SOURCE_PATHS = $(BOARD_DIR)/.
+# Mostly point to files from the original microbit_v2 board
 BOARD_HEADER_PATHS = $(BOARD_DIR)/.
-BOARD_LINKER_PATHS = $(BOARD_DIR)/.
-BOARD_SOURCES = $(notdir $(wildcard $(BOARD_DIR)/./*.c))
-BOARD_AS = $(notdir $(wildcard $(BOARD_DIR)/./*.s))
+BOARD_SOURCE_PATHS = $(BOARD_DIR)/../microbit_v2/.
+BOARD_LINKER_PATHS = $(BOARD_DIR)/../microbit_v2/.
+BOARD_SOURCES = $(notdir $(wildcard $(BOARD_DIR)/../microbit_v2/*.c))
+BOARD_AS = $(notdir $(wildcard $(BOARD_DIR)/../microbit_v2/*.s))
 
 # Board-specific configurations
 BOARD = PCA10100
@@ -65,7 +66,6 @@ BOARD_SOURCES += \
 	app_uart_fifo.c\
 	app_util_platform.c\
 	hardfault_handler_gcc.c\
-	hardfault_implementation.c\
 	nrf_assert.c\
 	nrf_atomic.c\
 	nrf_balloc.c\
