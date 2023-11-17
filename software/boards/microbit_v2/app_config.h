@@ -59,6 +59,7 @@
 #define NRFX_UART_ENABLED 1
 #define UART_ENABLED 1
 #define UART0_ENABLED 1
+#define UART1_ENABLED 1
 #define APP_UART_ENABLED 1
 #define HCI_UART_TX_PIN (32+8)
 #define HCI_UART_RX_PIN 6
