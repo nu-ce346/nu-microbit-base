@@ -39,8 +39,8 @@
 
 // I2C communication bus (internal)
 // Also includes a shared active-low interrupt (requires pull-up)
-#define I2C_SCL NRF_GPIO_PIN_MAP(0, 8)
-#define I2C_SDA NRF_GPIO_PIN_MAP(0,16)
+#define I2C_INTERNAL_SCL NRF_GPIO_PIN_MAP(0, 8)
+#define I2C_INTERNAL_SDA NRF_GPIO_PIN_MAP(0,16)
 #define SENSOR_INTERRUPT NRF_GPIO_PIN_MAP(0,25)
 
 // Speaker output

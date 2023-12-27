@@ -21,8 +21,12 @@ int main(void) {
 
   // Initialize I2C peripheral and driver
   nrf_drv_twi_config_t i2c_config = NRF_DRV_TWI_DEFAULT_CONFIG;
-  i2c_config.scl = I2C_SCL;
-  i2c_config.sda = I2C_SDA;
+  // WARNING!!
+  // These are NOT the correct pins for external I2C communication.
+  // If you are using QWIIC or other external I2C devices, the are
+  // connected to EDGE_P19 (SCL) and EDGE_P20 (SDA).
+  i2c_config.scl = I2C_INTERNAL_SCL;
+  i2c_config.sda = I2C_INTERNAL_SDA;
   i2c_config.frequency = NRF_TWIM_FREQ_100K;
   i2c_config.interrupt_priority = 0;
   nrf_twi_mngr_init(&twi_mngr_instance, &i2c_config);
