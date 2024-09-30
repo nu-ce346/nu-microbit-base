@@ -1,6 +1,11 @@
 Virtual Timers
 ==============
 
+This is part of Lab2 - Virtual Timers.
+
+_Warning:_ this lab cannot be used in final projects as-is. Instead you should
+use the SDK timer libraries, probably APP_TIMER.
+
 The goal of this lab is to write a virtual timer library. You will use
 one hardware timer to create a timer library that handles any number of timers.
 

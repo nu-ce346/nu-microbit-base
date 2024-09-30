@@ -1,6 +1,8 @@
 Capacitive Touch App
 ====================
 
+This is part of Lab4 - Breadboarding.
+
 Control an LED with the presence or absence of touch on the microbit logo pad.
 
 The logo pad is on the same side as the LED matrix, above it. Touching should
