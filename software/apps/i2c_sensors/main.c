@@ -24,7 +24,7 @@ int main(void) {
   // WARNING!!
   // These are NOT the correct pins for external I2C communication.
   // If you are using QWIIC or other external I2C devices, the are
-  // connected to EDGE_P19 (SCL) and EDGE_P20 (SDA).
+  // connected to EDGE_P19 (a.k.a. I2C_QWIIC_SCL) and EDGE_P20 (a.k.a. I2C_QWIIC_SDA)
   i2c_config.scl = I2C_INTERNAL_SCL;
   i2c_config.sda = I2C_INTERNAL_SDA;
   i2c_config.frequency = NRF_TWIM_FREQ_100K;

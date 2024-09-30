@@ -43,6 +43,12 @@
 #define I2C_INTERNAL_SDA NRF_GPIO_PIN_MAP(0,16)
 #define SENSOR_INTERRUPT NRF_GPIO_PIN_MAP(0,25)
 
+// QWIIC I2C connection (external)
+// SCL is the same as EDGE_P19
+// SDA is the same as EDGE_P20
+#define I2C_QWIIC_SCL NRF_GPIO_PIN_MAP(0,26)
+#define I2C_QWIIC_SDA NRF_GPIO_PIN_MAP(1, 0)
+
 // Speaker output
 #define SPEAKER_OUT NRF_GPIO_PIN_MAP(0, 0)
 
