@@ -15,6 +15,9 @@
 int main(void) {
   printf("Board started!\n");
 
+  // Turn on all LEDs on the back of the Microbit
+  // Add code here
+
   // Control LED with raw MMIO
   // Microphone LED is P0.20 and active high
   // Add code here
