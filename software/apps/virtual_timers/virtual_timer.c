@@ -16,7 +16,7 @@ void TIMER4_IRQHandler(void) {
   // It clears the event so that it doesn't happen again
   NRF_TIMER4->EVENTS_COMPARE[0] = 0;
 
-  // Place your interrupt handler code here
+  // You will place your interrupt handler code here
 
 }
 
@@ -27,33 +27,13 @@ uint32_t read_timer(void) {
   return 0;
 }
 
-// Initialize TIMER4 as a free running timer
-// 1) Set to be a 32 bit timer
-// 2) Set to count at 1MHz
-// 3) Enable the timer peripheral interrupt (look carefully at the INTENSET register!)
-//    Skip this for the first part of the lab.
-// 4) Clear the timer
-// 5) Start the timer
+// Initialize the timers
 void virtual_timer_init(void) {
   // Place your timer initialization code here
 }
 
 // This is a private helper function called from multiple public functions with different arguments.
 // Starts a timer. This function is called for both one-shot and repeated timers
-// To start a timer:
-// 1) Create a linked list node (This requires `malloc()`. Don't forget to free later)
-// 2) Setup the linked list node with the correct information
-//      - You will need to modify the `node_t` struct in "virtual_timer_linked_list.h"!
-// 3) Place the node in the linked list
-// 4) Setup the compare register so that the timer fires at the right time
-// 5) Return a timer ID
-//
-// Your implementation will also have to take special precautions to make sure that
-//  - You do not miss any timers
-//  - You do not cause consistency issues in the linked list (hint: you may need the `__disable_irq()` and `__enable_irq()` functions).
-//
-// Follow the lab manual and start with simple cases first, building complexity and
-// testing it over time.
 static uint32_t timer_start(uint32_t microseconds, virtual_timer_callback_t cb, bool repeated) {
 
   // Return a unique timer ID. (hint: What is guaranteed unique about the timer you have created?)

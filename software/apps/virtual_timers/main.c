@@ -50,7 +50,7 @@ int main(void) {
   virtual_timer_init();
   nrf_delay_ms(3000);
 
-  // Setup some timers and see what happens
+  // Set up some timers and see what happens
   //virtual_timer_start_repeated(1000000, led1_toggle);
   //virtual_timer_start_repeated(2000000, led2_toggle);
 
