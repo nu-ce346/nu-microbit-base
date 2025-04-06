@@ -13,7 +13,7 @@ build system provided by [nrf52x-base](https://github.com/lab11/nrf52x-base).
     * build-essential (make)
     * git
     * python3
-    * pyserial (`sudo apt install python3-serial`)
+    * pyserial (`sudo apt install python3-serial` or `pipx install pyserial`)
 
  2. ARM cross-compiler toolchain: [gcc-arm-none-eabi toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads)
 
@@ -23,9 +23,7 @@ build system provided by [nrf52x-base](https://github.com/lab11/nrf52x-base).
 
     On MacOS:
 
-        brew tap ArmMbed/homebrew-formulae
-        brew update
-        brew install ARMmbed/homebrew-formulate/arm-none-eabi-gcc
+        brew install gcc-arm-embedded
 
  3. JTAG programming tools: OpenOCD
 
