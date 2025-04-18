@@ -15,3 +15,5 @@ virtual_timer.[ch] contains the virtual timer library to be implemented
 
 main.c uses the timer library to blink LEDs on the Microbit
 
+clock_time.[ch] is for an additional part of the lab and provide real-world clock time built on top of virtual timers
+
