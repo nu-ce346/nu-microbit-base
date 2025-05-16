@@ -1,4 +1,4 @@
-// I2C sensors app
+// I2C accelerometer/magnetometer app
 //
 // Read from I2C accelerometer/magnetometer on the Microbit
 

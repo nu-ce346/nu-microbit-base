@@ -1,5 +1,5 @@
-I2C Sensors App
-===============
+I2C Accelerometer/Magnetometer App
+==================================
 
 This is part of Lab6 - I2C Accelerometer.
 
