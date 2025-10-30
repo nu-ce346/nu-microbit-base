@@ -27,7 +27,7 @@ int main(void) {
   // connected to EDGE_P19 (a.k.a. I2C_QWIIC_SCL) and EDGE_P20 (a.k.a. I2C_QWIIC_SDA)
   i2c_config.scl = I2C_INTERNAL_SCL;
   i2c_config.sda = I2C_INTERNAL_SDA;
-  i2c_config.frequency = NRF_TWIM_FREQ_100K;
+  i2c_config.frequency = NRF_DRV_TWI_FREQ_100K;
   i2c_config.interrupt_priority = 0;
   nrf_twi_mngr_init(&twi_mngr_instance, &i2c_config);
 

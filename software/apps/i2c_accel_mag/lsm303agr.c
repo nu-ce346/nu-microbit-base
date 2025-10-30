@@ -91,6 +91,7 @@ void lsm303agr_init(const nrf_twi_mngr_t* i2c) {
 
   // Enable temperature sensor
   i2c_reg_write(LSM303AGR_ACC_ADDRESS, TEMP_CFG_REG_A, 0xC0);
+  nrf_delay_ms(100); // needs delay to be ready
 }
 
 // Read the internal temperature sensor
