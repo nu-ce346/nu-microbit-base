@@ -20,12 +20,41 @@ BOARD = PCA10100
 USE_BLE = 0
 USE_THREAD = 0
 
+# Add 15.4 stuff
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/fal
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/mac_features
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/mac_features/ack_generator
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/clock
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/coex
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/hp_timer
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/lp_timer
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/random
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/temperature
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/rsch
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/rsch/raal/single_phy
+SDK_SOURCE_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/timer_scheduler
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/fal
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/fem
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/mac_features
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/mac_features/ack_generator
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/clock
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/coex
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/hp_timer
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/lp_timer
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/platform/temperature
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/rsch
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/rsch/raal
+SDK_HEADER_PATHS += $(NRF_BASE_DIR)/sdk/nrf5_sdk_16.0.0_thread/external/nRF-IEEE-802.15.4-radio-driver/src/timer_scheduler
+
 # Additional #define's to be added to code by the compiler
 BOARD_VARS = \
 	BOARD_$(BOARD)\
 	USE_APP_CONFIG\
 	DEBUG\
 	DEBUG_NRF\
+	RAAL_SINGLE_PHY\
 
 # Default SDK source files to be included
 BOARD_SOURCES += \
@@ -59,7 +88,6 @@ BOARD_SOURCES += \
 	nrf_serial.c\
 	nrf_strerror.c\
 	nrf_twi_mngr.c\
-	nrfx_clock.c\
 	nrfx_gpiote.c\
 	nrfx_ppi.c\
 	nrfx_prs.c\
@@ -71,6 +99,41 @@ BOARD_SOURCES += \
 	nrfx_twim.c\
 	nrfx_uart.c\
 	nrfx_uarte.c\
+
+## 15.4 stuff
+BOARD_SOURCES += \
+	nrf_802154.c\
+	nrf_802154_core.c\
+	nrf_802154_core_hooks.c\
+	nrf_802154_critical_section.c\
+	nrf_802154_debug.c\
+	nrf_802154_pib.c\
+	nrf_802154_rssi.c\
+	nrf_802154_rx_buffer.c\
+	nrf_802154_timer_coord.c\
+	nrf_802154_fal.c\
+	nrf_802154_csma_ca.c\
+	nrf_802154_delayed_trx.c\
+	nrf_802154_filter.c\
+	nrf_802154_frame_parser.c\
+	nrf_802154_precise_ack_timeout.c\
+	nrf_802154_ack_data.c\
+	nrf_802154_ack_generator.c\
+	nrf_802154_enh_ack_generator.c\
+	nrf_802154_imm_ack_generator.c\
+	nrf_802154_rsch.c\
+	nrf_802154_rsch_crit_sect.c\
+	nrf_802154_timer_sched.c\
+	nrf_802154_notification_direct.c\
+	nrf_802154_priority_drop_direct.c\
+	nrf_802154_request_direct.c\
+	single_phy.c\
+	nrf_802154_clock_nodrv.c\
+	nrf_802154_wifi_coex_none.c\
+	nrf_802154_hp_timer.c\
+	nrf_802154_lp_timer_nodrv.c\
+	nrf_802154_random_stdlib.c\
+	nrf_802154_temperature_none.c\
 
 # Include the OpenOCD programming makefile
 # Replace the default JLink programming makefile from the nrf52x-base repo
