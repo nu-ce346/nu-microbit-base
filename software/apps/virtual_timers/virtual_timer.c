@@ -12,9 +12,8 @@
 
 // This is the interrupt handler that fires on a compare event
 void TIMER4_IRQHandler(void) {
-  // This should always be the first line of the interrupt handler!
-  // It clears the event so that it doesn't happen again
-  NRF_TIMER4->EVENTS_COMPARE[0] = 0;
+  // Make sure to always clear the event as the first line of the handler
+  // The channel here needs to match your compare event
 
   // You will place your interrupt handler code here
 
