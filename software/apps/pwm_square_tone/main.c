@@ -43,7 +43,7 @@ static void play_tone(uint16_t frequency) {
   // You can access it as NRF_PWM0->COUNTERTOP
   // TODO
 
-  // Modify the sequence data to be a 25% duty cycle
+  // Modify the sequence data to be a 33% duty cycle
   // TODO
 
   // Start playback of the samples and loop indefinitely
